@@ -4,42 +4,43 @@
     "version": "0.0.1",
     "ssh-key": "lth",
     "author": "https://github.com/lbthomsen",
-    "containers": [ {
-        "hostname": "root1",
-        "template": "debian-stretch",
-        "peer-criteria": "HTTP-GROUP",
-        "size": "SMALL",
-        "port-mapping": [
-          {
-            "protocol": "tcp",
-            "domain": "geth-pvt.envs.subutai.cloud",
-            "internal-port": "8545",
-            "external-port": "8545"
-          }
-        ]
-      }, 
-      {
-        "hostname": "root2",
-        "template": "debian-stretch",
-        "peer-criteria": "HTTP-GROUP",
-        "size": "SMALL",
-        "port-mapping": [
-          {
-            "protocol": "tcp",
-            "domain": "geth-pvt.envs.subutai.cloud",
-            "internal-port": "8545",
-            "external-port": "8545"
-          }
-        ]
-      }
+    "containers": [
+        {
+            "hostname": "root1",
+            "template": "debian-stretch",
+            "peer-criteria": "HTTP-GROUP",
+            "size": "SMALL",
+            "port-mapping": [
+                {
+                    "protocol": "tcp",
+                    "domain": "geth-pvt.envs.subutai.cloud",
+                    "internal-port": "8545",
+                    "external-port": "8545"
+                }
+            ]
+        },
+        {
+            "hostname": "root2",
+            "template": "debian-stretch",
+            "peer-criteria": "HTTP-GROUP",
+            "size": "SMALL",
+            "port-mapping": [
+                {
+                    "protocol": "tcp",
+                    "domain": "geth-pvt.envs.subutai.cloud",
+                    "internal-port": "8545",
+                    "external-port": "8545"
+                }
+            ]
+        }
     ],
-    "peer-criteria": [ 
-      {
-        "name": "HTTP-GROUP",
-        "max-price": "5",
-        "avg-cpu-load": "50",
-        "min-free-ram": "128",
-        "min-free-disk-space": "10"
-      }
+    "peer-criteria": [
+        {
+            "name": "HTTP-GROUP",
+            "max-price": "5",
+            "avg-cpu-load": "50",
+            "min-free-ram": "128",
+            "min-free-disk-space": "10"
+        }
     ]
-  }
+}
